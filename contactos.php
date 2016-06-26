@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,15 +12,15 @@
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />	
 <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/script.js"> </script>
 <script src="js/jquery.min.js"> </script>
+<script src="js/script.js"> </script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,800' rel='stylesheet' type='text/css'>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
+				$(".scroll").click(function(event){
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 				});
@@ -26,11 +29,12 @@
 
 </head>
 <body>
+	<div class="loader"></div>
 	<!--start-header-->
 	<div class="header second" id="home">
 		<div class="container">
 			<div class="logo">
-				<a href="index.php"><img src="images/symbol.png"></a>
+				<a href="main.php"><img src="images/symbol.png"></a>
 			</div>
 			<div class="navigation">
 			 <span class="menu"></span> 

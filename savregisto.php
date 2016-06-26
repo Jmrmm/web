@@ -1,23 +1,24 @@
 <?php
 session_start();
 
-$conn = new mysqli('localhost', 'adminQBxiRqe', 'BzSq4kWkDQvU', 'moon');
+$conn = new mysqli('localhost', 'adminRRFevX1', 'SzNbpq4StL7a', 'web');
 
 if($_POST) {
 
 		$emailreg = $_POST['emailreg'];
 		$passreg = $_POST['passreg'];
 
-		$sql = "SELECT * FROM users WHERE email = '$emailreg'";
-		$result = $conn->query($sql);
+		$sql = "SELECT COUNT(*) AS num FROM users WHERE email = '$emailreg'";
+		$result = mysqli_query($conn,$sql);
+		$data = mysqli_fetch_assoc($result);
 
-		if ($result->num_rows == 0) {
+		if($data['num'] == 0) {
 			$sql = "INSERT INTO users (email, password) VALUES ('$emailreg', '$passreg')";
-			$conn->query($sql);
+			mysqli_query($conn,$sql);
 
 			$_SESSION['email'] = $emailreg;
 		} else {
-			$_SESSION['email'] = null;
+			$_SESSION['email'] = "";
 		}
 }
 ?>

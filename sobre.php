@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,6 +13,7 @@
 <link href="css/style.css" rel='stylesheet' type='text/css' />	
 <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"> </script>
+<script src="js/script.js"> </script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,800' rel='stylesheet' type='text/css'>
@@ -39,11 +43,12 @@
 
 </head>
 <body>
+	<div class="loader"></div>
 	<!--start-header-->
 		<div class="header second" id="home">
 		<div class="container">
 			<div class="logo">
-				<a href="index.php"><img src="images/symbol.png"></a>
+				<a href="main.php"><img src="images/symbol.png"></a>
 			</div>
 			<div class="navigation">
 			 <span class="menu"></span> 
@@ -69,12 +74,12 @@
 		  <h3 class="title">Sobre</h3>
 				<div class="about-top">
 					<div class="col-md-7 about-top-right">
-						<h4>Bulum iaculis lacinia est.</h4>
-						<p>Bulum iaculis lacinia est. Proin dictum elemntum velit.</p>
-						<p>Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem ipsum dmeconsectetuer adipiscing elit. ellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla vene natis. In pede mi aliquet sit amet euismod in auctor ut ligula. <br/></p>
+						<h4>Gosto por programação.</h4>
+						<p>Clica na imagem para o velhinho Asteroids em Python (convertido em javascript para correr em browser e totalmente funcional).</p>
+						<p>Tens 3 vidas, movimenta a nave com as setas e dispara com a barra de espaços para pequenos momentos de grande diversão e muita nostalgia. <br/></p>
 					</div>
 					<div class="col-md-5 about-top-left">
-						<!--<img src="images/b5.jpg" class="img-responsive" alt=""/>-->
+						<a href="http://www.codeskulptor.org/#user38_B4mpGjKUWA_0.py" target="_blank"><img src="images/asteroids.jpg" class="img-responsive" alt="" width="100%"/></a>
 					</div>
 					<div class="clearfix"></div>
 				</div>

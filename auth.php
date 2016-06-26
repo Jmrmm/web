@@ -1,12 +1,13 @@
 <?php
-$conn = new mysqli('localhost', 'adminQBxiRqe', 'BzSq4kWkDQvU', 'moon');
+session_start();
+
+if ($_SESSION['email'] != "") {
+		$conn = new mysqli('localhost', 'adminRRFevX1', 'SzNbpq4StL7a', 'web');
 
 		$sql = "SELECT * FROM contactos";
-		$result = $conn->query($sql);
+		$result = $conn->query($sql);?>
 
-?>
 		<div class="container">
-
 	       <div class="blog-top">
 				<div class="single">
 				 <div class="single_grid2">
@@ -36,3 +37,5 @@ $conn = new mysqli('localhost', 'adminQBxiRqe', 'BzSq4kWkDQvU', 'moon');
 				</div>
 			<!--//End-blog-pagenate-->
 		</div>
+<?php }
+?>

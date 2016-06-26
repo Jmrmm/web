@@ -1,4 +1,8 @@
 $(function(){ 
+	$(window).load(function() {
+		$(".loader").fadeOut("slow");
+	})
+
 	$("#b1").click(function() {
 
     var nome = $('#nome').val();
@@ -23,7 +27,7 @@ $(function(){
     	$('input[name=email]').css({'border':'1px solid'});
     }
     if (proceed == false) {
-        $("#contactos_box").load("err.txt");    
+        $("#contactos_box").load("err.php");    
         return false;
     }
 
@@ -45,7 +49,7 @@ $(function(){
 			}
 			});
 		}
-		$("#contactos_box").load("contactos.txt");
+		$("#contactos_box").load("msgcontactos.php");
 		return false;
 	}
 
@@ -74,7 +78,7 @@ $(function(){
     	$('input[name=passreg').css({'border':'1px solid'});
     }
     if (proceed == false) {
-        $("#registo_box").load("err.txt");    
+        $("#registo_box").load("err.php");    
         return false;
     }
 
@@ -124,7 +128,7 @@ $(function(){
     	$('input[name=passlog').css({'border':'1px solid'});
     }
     if (proceed == false) {
-        $("#login_box").load("err.txt");    
+        $("#login_box").load("err.php");    
         return false;
     }
 

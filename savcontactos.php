@@ -1,5 +1,7 @@
 <?php
-$conn = new mysqli('localhost', 'adminQBxiRqe', 'BzSq4kWkDQvU', 'moon');
+session_start();
+
+$conn = new mysqli('localhost', 'adminRRFevX1', 'SzNbpq4StL7a', 'web');
 
 if($_POST) {
 	$nome=$_POST['nome'];

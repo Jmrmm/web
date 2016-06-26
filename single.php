@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['email'] = ""
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -30,11 +31,12 @@ session_start();
 </head>
 
 <body>
+	<div class="loader"></div>
 	<!--start-header-->
 		<div class="header second" id="home">
 		<div class="container">
 			<div class="logo">
-				<a href="index.php"><img src="images/symbol.png"></a>
+				<a href="main.php"><img src="images/symbol.png"></a>
 			</div>
 			<div class="navigation">
 			 <span class="menu"></span> 
@@ -97,13 +99,13 @@ session_start();
  <!--//blog-->
 <div class="contact" id="contact">
 		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.91163207516!2d2.3470599!3d48.85885894999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sin!4v1436340519910" allowfullscreen=""></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.3268061167264!2d-8.600905384928529!3d41.14921971868928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2464ede4ac66ff%3A0xc284a210925804dc!2sCampo+24+de+Agosto%2C+4300+Porto!5e0!3m2!1spt-PT!2spt!4v1444901651323" allowfullscreen=""></iframe>
 					<span> </span>
 				 </div>
 				 <div class="container">
 					<div class=" contact-box">
 					<div class="col-md-6 contact-info">
-						<h3>Contact information</h3>
+						<h3>Informação de Contacto</h3>
 						<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non, ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.</p>
 						<p >Cras fermentum elit quis magna congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis dapibus lacus </p>
 					</div>
@@ -111,22 +113,22 @@ session_start();
 					<div class="col-md-6 contact-form">
 						<form>
 								<div class="col-md-6 your-name">
-									<span>YOUR NAME:</span>
+									<span>NOME:</span>
 									<input type="text" name="your name" disabled placeholder=" ">
 								</div>
 								<div class="col-md-6 your-name">
-									<span>YOUR EMAIL:</span>
+									<span>EMAIL:</span>
 									<input type="text" name="your email" disabled placeholder=" ">
 								</div>
 							
 								<div class="clearfix"> </div>
 								<div class=" your-msg">
-									<span>YOUR MESSAGE:</span>
+									<span>MENSAGEM:</span>
 									<textarea cols="70" rows="5" name="message" disabled placeholder=" "> </textarea>
 								</div>
 							
 								<div class="your-submit">
-									<input type="submit" value="Send">
+									<input type="submit" value="Enviar">
 								
 							</div>
 						</form>
@@ -137,11 +139,7 @@ session_start();
 					</div>
 	          </div>
 <!--//contact-->
-		<!--/start-copyright-section-->
-					<div class="copyright">
-						  <p>&copy; 2015 Glide. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
-					</div>
-           <!--//end-copyright-section-->
+
 				<!--start-smoth-scrolling-->
 						<script type="text/javascript">
 									$(document).ready(function() {

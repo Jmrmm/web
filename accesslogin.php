@@ -1,21 +1,26 @@
 <?php
 session_start();
 
-$conn = new mysqli('localhost', 'adminQBxiRqe', 'BzSq4kWkDQvU', 'moon');
+$conn = new mysqli('localhost', 'adminRRFevX1', 'SzNbpq4StL7a', 'web');
 
 if($_POST) {
 
 		$emaillog = $_POST['emaillog'];
 		$passlog = $_POST['passlog'];
 
-		$sql = "SELECT * FROM users WHERE email = '$emaillog'";
-		$result = $conn->query($sql);
+		$sql = "SELECT COUNT(*) as num FROM users WHERE email = '$emaillog'";
+		$result = mysqli_query($conn,$sql);
+		$data = mysqli_fetch_assoc($result);
 
-		if ($result->num_rows > 0) {
-			if ($result->fetch_assoc()['password'] == $passlog) {
+		$sql = "SELECT * FROM users WHERE email = '$emaillog'";
+		$result2 = mysqli_query($conn,$sql);
+		$data2 = mysqli_fetch_assoc($result2);
+
+		if ($data['num'] > 0) {
+			if ($data2['password'] == $passlog) {
 				$_SESSION['email'] = $emaillog;
 			} else {
-				$_SESSION['email'] = null;
+				$_SESSION['email'] = "";
 			}
 		}
 }
