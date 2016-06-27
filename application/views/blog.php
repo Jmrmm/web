@@ -66,14 +66,14 @@ $("#content").prepend(html);
 		<div class="header second" id="home">
 		<div class="container">
 			<div class="logo">
-				<a href="main.php"><img src="images/symbol.png"></a>
+				<a href="main"><img src="images/symbol.png"></a>
 			</div>
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig second">
-					<li><a class="active" href="galeria.php">GALERIA</a><span> </span></li>
-					<li><a href="sobre.php">SOBRE</a><span> </span></li>
-					<li><a href="contactos.php">CONTACTOS</a><span> </span></li>
+					<li><a href="galeria">GALERIA</a><span> </span></li>
+					<li><a href="sobre">SOBRE</a><span> </span></li>
+					<li><a href="contactos">CONTACTOS</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
